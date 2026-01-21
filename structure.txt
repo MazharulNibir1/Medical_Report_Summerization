@@ -1,0 +1,83 @@
+medical-report-summarization/
+│
+├── data/
+│   ├── raw/                          # Original downloaded data
+│   ├── processed/                    # Cleaned and preprocessed data
+│   │   ├── train.csv
+│   │   ├── val.csv
+│   │   └── test.csv
+│   └── sample/                       # Sample data for quick testing
+│
+├── notebooks/
+│   ├── 01_eda.ipynb                 # Exploratory data analysis
+│   ├── 02_preprocessing.ipynb       # Data cleaning experiments
+│   ├── 03_baseline.ipynb            # Baseline model experiments
+│   └── 04_model_training.ipynb      # Fine-tuning experiments
+│
+├── src/
+│   ├── __init__.py
+│   ├── data/
+│   │   ├── __init__.py
+│   │   ├── download.py              # Download dataset from Kaggle
+│   │   ├── preprocess.py            # Data cleaning functions
+│   │   └── dataset.py               # PyTorch Dataset class
+│   │
+│   ├── models/
+│   │   ├── __init__.py
+│   │   ├── baseline.py              # Extractive summarization baseline
+│   │   ├── transformer.py           # T5/BART model wrapper
+│   │   └── utils.py                 # Model utility functions
+│   │
+│   ├── training/
+│   │   ├── __init__.py
+│   │   ├── train.py                 # Training loop
+│   │   └── evaluate.py              # Evaluation metrics
+│   │
+│   └── api/
+│       ├── __init__.py
+│       ├── app.py                   # FastAPI application
+│       ├── schemas.py               # Pydantic models
+│       └── inference.py             # Inference logic
+│
+├── configs/
+│   ├── base_config.yaml             # Base configuration
+│   ├── t5_config.yaml               # T5-specific config
+│   └── bart_config.yaml             # BART-specific config
+│
+├── scripts/
+│   ├── download_data.sh             # Script to download data
+│   ├── train_model.py               # Training script
+│   └── evaluate_model.py            # Evaluation script
+│
+├── tests/
+│   ├── __init__.py
+│   ├── test_preprocess.py
+│   ├── test_models.py
+│   └── test_api.py
+│
+├── models/                          # Saved model checkpoints
+│   ├── baseline/
+│   └── fine_tuned/
+│       ├── best_model/
+│       └── checkpoints/
+│
+├── results/
+│   ├── metrics/                     # Evaluation results
+│   ├── predictions/                 # Model predictions
+│   └── visualizations/              # Plots and charts
+│
+├── deployment/
+│   ├── Dockerfile
+│   ├── docker-compose.yml
+│   └── requirements.txt
+│
+├── docs/
+│   ├── architecture.md
+│   ├── api_documentation.md
+│   └── model_card.md
+│
+├── .gitignore
+├── .env.example                     # Environment variables template
+├── requirements.txt                 # Python dependencies
+├── setup.py                         # Package installation
+└── README.md                        # Project documentation
