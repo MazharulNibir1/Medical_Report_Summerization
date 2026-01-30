@@ -1,0 +1,47 @@
+# T5-specific Configuration - Optimized for RTX 3060
+
+# Data Configuration
+data:
+  raw_dir: "./data/raw"
+  processed_dir: "./data/processed"
+  train_split: 0.8
+  val_split: 0.1
+  test_split: 0.1
+  max_input_length: 512
+  max_target_length: 128
+
+# Model Configuration
+model:
+  name: "t5-small"
+  cache_dir: "./models/cache"
+  
+# Training Configuration
+training:
+  output_dir: "./models/fine_tuned/t5"
+  num_epochs: 3
+  batch_size: 8  # Optimized for 12GB VRAM
+  learning_rate: 3e-4
+  weight_decay: 0.01
+  warmup_steps: 500
+  gradient_accumulation_steps: 1  # No need with decent batch size
+  fp16: true  # Use mixed precision for faster training
+  save_steps: 500
+  eval_steps: 500
+  logging_steps: 100
+  save_total_limit: 3
+  
+# Generation Configuration
+generation:
+  max_length: 128
+  min_length: 30
+  num_beams: 4
+  length_penalty: 2.0
+  early_stopping: true
+  no_repeat_ngram_size: 3
+  
+# Evaluation Configuration
+evaluation:
+  metrics:
+    - rouge
+    - bertscore
+  batch_size: 16  # Can use larger batch for eval (no gradients)
