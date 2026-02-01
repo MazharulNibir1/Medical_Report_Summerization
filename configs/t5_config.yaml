@@ -18,7 +18,7 @@ model:
 # Training Configuration
 training:
   output_dir: "./models/fine_tuned/t5"
-  num_epochs: 3
+  num_epochs: 50
   batch_size: 8  # Optimized for 12GB VRAM
   learning_rate: 3e-4
   weight_decay: 0.01
