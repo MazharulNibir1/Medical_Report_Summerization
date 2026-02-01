@@ -426,9 +426,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📧 Contact
 
 **Nibir**
-- GitHub: [@yourusername](https://github.com/yourusername)
-- LinkedIn: [Your LinkedIn](https://linkedin.com/in/yourprofile)
-- Email: your.email@example.com
+- GitHub: [@MazharulNibir1](https://github.com/MazharulNibir1)
+- LinkedIn: [Mazharul Islam Nibir](https://www.linkedin.com/in/mazharul-islam-nibir-497480211/)
+- Email: mazharulnibirwork4109@gmail.com
 
 **Project Link**: [https://github.com/yourusername/medical-report-summarization](https://github.com/yourusername/medical-report-summarization)
 
@@ -455,6 +455,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **⭐ If you find this project helpful, please consider giving it a star! ⭐**
 
-Made with ❤️ for better healthcare outcomes
+Made with the intention for better healthcare outcomes
 
 </div>
