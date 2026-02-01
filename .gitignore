@@ -52,6 +52,9 @@ models/*
 # Results
 results/*
 !results/.gitkeep
+!results/visualizations/  # Allow visualizations folder
+results/visualizations/*
+!results/visualizations/*.png  # But allow PNG files
 
 # Environment variables
 .env
